@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-paper text-ink font-sans antialiased selection:bg-brand-light selection:text-brand;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea {
+        @apply border-line rounded-[6px] text-ink text-sm transition-colors duration-150;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        @apply border-brand ring-2 ring-brand/20 outline-none;
+    }
+}
